@@ -8,6 +8,7 @@ June 01, 2023  4h
 Congratulations!\
 This is the fourteenth day for leetcode python study. Today we will learn more about the Binary Tree!\
 The challenges today are about ~~need to delete later~~.
+We will escape 迭代法 for now. 二刷有精力的时候 再去掌握迭代法。
 
 
 ## 104. 
