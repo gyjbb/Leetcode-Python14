@@ -41,7 +41,7 @@ class Solution:
         return height
 ```
 ```python
-# ways 1: recursion and postorder traversal simple versionn
+# ways 1: recursion and postorder traversal simple version
 class solution:
     def maxdepth(self, root: treenode) -> int:
         if not root:
@@ -70,7 +70,32 @@ class Solution:
         return depth
 ```
 
-#### 
+#### 559. Maximum Depth of N-ary Tree
+```python
+# ways 1: recursion and postorder traversal simple version
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+"""
+class Solution:
+    def maxDepth(self, root: 'Node') -> int:
+        if not root:
+            return 0
+
+        max_depth = 1
+
+        for child in root.children:
+            max_depth = max(max_depth, self.maxDepth(child)+1)
+        
+        return max_depth
+```
+```python
+# ways 2: 迭代法，层序遍历with queue：
+
+```
 
 
 
