@@ -184,4 +184,49 @@ class Solution:
 [video](https://www.bilibili.com/video/BV1eW4y1B7pD/?spm_id_from=pageDriver&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
 完全二叉树的节点个数（优先掌握递归）\
 需要了解，普通二叉树 怎么求，完全二叉树又怎么求。\
+We use postorder traversal and recusion to finish this question.\
+```python
+# ways 1:普通二叉树 递归法 postorder traversal：
+class Solution:
+    def countNodes(self, root: TreeNode) -> int:
+        return self.getNodesNum(root)
+        
+    def getNodesNum(self, cur):
+        if not cur:
+            return 0
+        leftNum = self.getNodesNum(cur.left) #左
+        rightNum = self.getNodesNum(cur.right) #右
+        treeNum = leftNum + rightNum + 1 #中
+        return treeNum
+```
+```python
+# ways 1:精简版本
+class Solution:
+    def countNodes(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        return 1 + self.countNodes(root.left) + self.countNodes(root.right)
+```
+
+```python
+# ways 2:完全二叉树, 节点数是2的n次方-1， n是二叉树的深度。
+class Solution:
+    def countNodes(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        left = root.left   # define two pointers
+        right = root.right
+        leftDepth = 0  #这里初始为0是有目的的，为了下面求指数方便
+        rightDepth = 0
+        while left: #求左子树深度
+            left = left.left
+            leftDepth += 1
+        while right: #求右子树深度
+            right = right.right
+            rightDepth += 1
+        if leftDepth == rightDepth:
+            return (2 << leftDepth) - 1 #注意(2<<1) 相当于2^2，所以leftDepth初始为0
+        return self.countNodes(root.left) + self.countNodes(root.right) + 1       #精简版本， 左右中，是后序遍历。
+```
+
 
