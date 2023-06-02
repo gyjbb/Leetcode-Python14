@@ -8,7 +8,7 @@ June 01, 2023  4h
 Congratulations!\
 This is the fourteenth day for leetcode python study. Today we will learn more about the Binary Tree!\
 The challenges today are about using recursion and postorder traversal to solve problems.\
-We will focus on **recusion** to solve all the three challenges today and escape 迭代法 for now. 二刷有精力的时候 再去掌握迭代法。
+We will focus on **recursion** to solve all the three challenges today and escape 迭代法 for now. 二刷有精力的时候 再去掌握迭代法。
 
 
 ## 104. Maximum Depth of Binary Tree
@@ -185,7 +185,7 @@ class Solution:
 [video](https://www.bilibili.com/video/BV1eW4y1B7pD/?spm_id_from=pageDriver&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
 完全二叉树的节点个数（优先掌握递归）\
 需要了解，普通二叉树 怎么求，完全二叉树又怎么求。\
-We use postorder traversal and recusion to finish this question.\
+We use postorder traversal and recusion to finish this question.
 ```python
 # ways 1:普通二叉树 递归法 postorder traversal：
 class Solution:
