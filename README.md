@@ -12,7 +12,7 @@ We will focus on **recusion** to solve all the three challenges today and escape
 
 
 ## 104. Maximum Depth of Binary Tree
-[Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.md）\
+[Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.md)\
 [leetcode](https://leetcode.com/problems/maximum-depth-of-binary-tree/)\
 [video](https://www.bilibili.com/video/BV1Gd4y1V75u/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
 二叉树的最大深度 （优先掌握递归）\
