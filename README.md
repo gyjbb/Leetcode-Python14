@@ -7,7 +7,7 @@ June 01, 2023  4h
 
 Congratulations!\
 This is the fourteenth day for leetcode python study. Today we will learn more about the Binary Tree!\
-The challenges today are about ~~need to delete later~~.\
+The challenges today are about using recursion and postorder traversal to solve problems.\
 We will focus on **recusion** to solve all the three challenges today and escape 迭代法 for now. 二刷有精力的时候 再去掌握迭代法。
 
 
@@ -69,6 +69,7 @@ class Solution:
         
         return depth
 ```
+       
 
 #### 559. Maximum Depth of N-ary Tree
 ```python
