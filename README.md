@@ -94,15 +94,49 @@ class Solution:
 ```
 ```python
 # ways 2: 迭代法，层序遍历with queue：
+class Solution:
+    def maxDepth(self, root: 'Node') -> int:
+        if not root:
+            return 0
+        
+        depth = 0
+        queue = collections.deque([root])
 
+        while queue:
+            depth += 1
+            for _ in range(len(queue)):
+                node = queue.popleft()
+                for child in node.children:
+                    queue.append(child)
+
+        return depth
+```
+```python
+# ways 3: simply use stack:
+class Solution:
+    def maxDepth(self, root: 'Node') -> int:
+        if not root:
+            return 0
+        
+        max_depth = 0
+        stack = [(root, 1)]
+
+        while stack:
+            node, depth = stack.pop()
+            max_depth =  max(max_depth, depth)
+            for child in node.children:
+                stack.append((child, depth+1))
+
+        return depth
 ```
 
-
-
 ## 111.
+[leetcode](https://leetcode.com/problems/minimum-depth-of-binary-tree/)\
+[reading](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0111.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6.md)\
+[video](https://www.bilibili.com/video/BV1QD4y1B7e2/?spm_id_from=pageDriver&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
 二叉树的最小深度 （优先掌握递归）\
 和最大深度 看似差不多，其实 差距还挺大，有坑。\
-
+最小深度是根节点和最近的叶子节点的最小距离。
 
 
 ## 222.
