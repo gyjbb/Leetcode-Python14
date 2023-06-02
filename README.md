@@ -137,7 +137,7 @@ class Solution:
 [video](https://www.bilibili.com/video/BV1QD4y1B7e2/?spm_id_from=pageDriver&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
 二叉树的最小深度 （优先掌握递归）\
 和最大深度 看似差不多，其实 差距还挺大，有坑。\
-最小深度是根节点和最近的叶子节点的最小距离。此处我们也用后续遍历去求深度， 因为深度就等于根节点的高度。\
+最小深度是根节点和最近的叶子节点的最小距离。此处我们也用后续遍历去求深度， 因为深度就等于根节点的高度。
 ```python
 # ways 1: recursion and postorder traversal:
 # Definition for a binary tree node.
